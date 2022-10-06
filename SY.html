@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+</head> 
+
+<body>
+<div id:"header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#home" target="_self">Home</a></li>
+                <li><a href="#about"target="_self">About</a></li>
+                <li><a href="#contact"target="_self">Contact</a></li>
+            </ul>
+            <!-- <i class="fa fa-bars"></i> -->
+        </nav>
+        <div class="header-text">
+            <h1>Hi ! I am Seah from Malaysia.</h1>
+        </div>
+    </div>
+</div>
+
+<!-- About me -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class ="about-col-1"></div>
+                <img src="images/RIC04073.png" width="400" height="500"/>
+            <div class ="about-col-2">
+                 <h1 class="subt-title">About Me</h1><br>
+                 <p> Still exploring the world.</p>  
+            </div>      
+        </div>
+    </div>
+</div>
+
+<!-- Contact section -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+                <p><i class="fa fa-envelope"></i> seahyou@gmail.com</p>
+                <p><i class="fa fa-phone"></i> 0124971707</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/seah-you-a88771214/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/seeyoulater_814/"target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://github.com/SY814"target="_blank"><i class="fa fa-github"></i></a>
+                </div>    
+                
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <!-- <span id="msg"> Thanks. </span> -->
+            </div>
+
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ SeahYou</p>
+    </div>
+
+    </div>
+</div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzSab-bJk6OaEMNXk4Xjr6OiXo3Sz_wiUH8wOvKp8Lk5BBzOcCI5_jXMsjZSkQGxcdh/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e =>{
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    
+</body>
+
+</html>
