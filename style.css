@@ -1,15 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-body{
+
+body {
     background: #181328;
     color: rgb(251, 248, 248);
 }
 
-#header{
+#header {
     width: 100%;
     height: 100vh;
     background-image: url(images/RIC04073.png);
@@ -17,35 +18,35 @@ body{
     background-position: center;
 }
 
-.container{
+.container {
     padding: 10px 10%;
 }
 
-nav{
-    display:flex;
+nav {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.logo{
+.logo {
     width: 140px;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
 
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size:18px;
+    font-size: 18px;
     position: relative;
 }
 
-nav ul li a::after{
+nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -56,72 +57,72 @@ nav ul li a::after{
     transition: 0.5s;
 }
 
-nav ul li a:hover::after{
+nav ul li a:hover::after {
     width: 100%;
 }
 
-.header-text h1{
+.header-text h1 {
     font-size: 30px;
     margin-top: 50px;
 }
 
 /* About me */
-#about{
+#about {
     padding: 80px 0;
-    color: #fffefe;   
+    color: #fffefe;
     font-size: 30px;
 }
 
-.row{
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.about-col-1{
+.about-col-1 {
     flex-basis: 10%;
-} 
+}
 
-.about-col-1 img{
+.about-col-1 img {
     width: 50%;
     border-radius: 45px;
 }
 
-.about-col-2{
+.about-col-2 {
     flex-basis: 60%;
 }
 
-.sub-title{
+.sub-title {
     font-size: 60px;
     font-weight: 600;
     color: #fff;
 }
 
 /* contact */
-.contact-left{
-    flex-basis:35%;
+.contact-left {
+    flex-basis: 35%;
 }
 
-.contact-right{
-    flex-basis:60%;
+.contact-right {
+    flex-basis: 60%;
 }
 
-.contact-left p{
+.contact-left p {
     margin-top: 8%;
 }
 
-.contact-left p i{
+.contact-left p i {
     color: #ff004f;
     margin-right: 5px;
     font-size: 25px;
 }
 
-.social-icons{
+.social-icons {
     margin-top: 30px;
     /* color: #fffdfd; */
 }
 
-.social-icons a{
+.social-icons a {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
@@ -130,16 +131,16 @@ nav ul li a:hover::after{
     transition: transform 0.5s;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     color: #ffffff;
     transform: translateY(-5px);
 }
 
-.contact-right form{
+.contact-right form {
     width: 100%;
 }
 
-.btn.btn2{
+.btn.btn2 {
     display: inline-block;
     background: #ff004f;
     font-size: 20px;
@@ -149,7 +150,8 @@ nav ul li a:hover::after{
     padding: 2%
 }
 
-form input, form textarea{
+form input,
+form textarea {
     width: 100%;
     border: 0;
     outline: none;
@@ -161,9 +163,9 @@ form input, form textarea{
     border-radius: 6px;
 }
 
-.copyright{
-    width:100%;
-    text-align:center;
+.copyright {
+    width: 100%;
+    text-align: center;
     padding: 25px 0;
     background: #262626;
     font-weight: 300;
@@ -177,15 +179,17 @@ form input, form textarea{
 } */
 
 /* for smaller screen */
-@media only screen and (max-width: 600px){
-    #header{
+@media only screen and (max-width: 600px) {
+    #header {
         background-image: url(images/RIC03860.png);
     }
-    .header-text{
+
+    .header-text {
         margin-top: 100%;
         font-size: 16px;
     }
-    .header-text h1{
+
+    .header-text h1 {
         font-size: 30px;
     }
 }
